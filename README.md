@@ -37,16 +37,16 @@ bfk-clojure provides three functions to proceed a clojure seq: brainfk, bfk-proc
 	```
 
 ###String Processing:
-* All the functions works on string as well.
-e.g
-```clojure
-(brain-phucker/bfk-proceed "teststring" "[-------------------------------->]")
-; "TESTSTRING"
-(brain-phucker/bfk-proceed "teststring" "[-------------------------------->>]")
-; "TeStStRiNg"
-(brain-phucker/bfk-proceed "teststring" "[-------------------------------->>>]")
-; "TesTstRinG"
-```
+* all the functions works on string as well,
+   	e.g
+	```clojure
+	(brain-phucker/bfk-proceed "teststring" "[-------------------------------->]")
+	; "TESTSTRING"
+	(brain-phucker/bfk-proceed "teststring" "[-------------------------------->>]")
+	; "TeStStRiNg"
+	(brain-phucker/bfk-proceed "teststring" "[-------------------------------->>>]")
+	; "TesTstRinG"
+	```
 
 ###Introduction To Brain Fxck Language
 	Brain Fxck is a minimize language with 8 commands, which runs on a machine containing an array and a pointer, the pointer is initially pointing at the 0th element
