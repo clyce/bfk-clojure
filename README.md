@@ -37,7 +37,7 @@ bfk-clojure provides three functions to proceed a clojure seq: brainfk, bfk-proc
 	```
 
 ###String Processing:
-	All the functions works on string as well.
+* All the functions works on string as well.
 	e.g
 	```clojure
 	(brain-phucker/bfk-proceed "teststring" "[-------------------------------->]")
