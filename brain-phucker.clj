@@ -23,7 +23,7 @@
                                      (recur jmp-count (fstep jmp-searcher)))))) cur-op-pos coll-to-op coll-final)
                 (recur (inc cur-cmd-pos) cur-op-pos coll-to-op coll-final)))))]
     (if (string? coll) 
-      (let [interp-return (brainfk (map int coll)) combine-to-str #(->> % (map char) (apply str))]
+      (let [interp-return (brainfk (map int coll) exp) combine-to-str #(->> % (map char) (apply str))]
         {:result (combine-to-str (:result interp-return)) :output (combine-to-str (:output interp-return))})
       (bfk-interp coll exp))))
 (defn bfk-proceed "Process coll as a brainf**k machine, and eval exp as a brainf**k expression on it. Returns the proceeded coll as a list/string" [coll exp] (:result (brainfk coll exp)))
