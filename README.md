@@ -33,19 +33,19 @@ e.g
 
 (bfk-proceed [0] "++")
 
-; (2)
+;=> (2)
 
 (bfk-proceed [1 2 3] ">+>++")
 
-; (1 3 5)
+;=> (1 3 5)
 
 (bfk-proceed [0] ">>+++")
 
-; (0 0 3)
+;=> (0 0 3)
 
 (bfk-proceed [1 1 1 1 1] ">[+>>]")
 
-; (1 2 1 2 1 0)
+;=> (1 2 1 2 1 0)
 
 ```
 
@@ -57,7 +57,7 @@ e.g
 
 (brain-phucker/brainfk [10] "[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>.")
 
-; {:result (0 87 100 33 10), :output (72 101 108 108 111 32 87 111 114 108 100 33 10)}
+;=> {:result (0 87 100 33 10), :output (72 101 108 108 111 32 87 111 114 108 100 33 10)}
 
 ```
 
@@ -70,15 +70,15 @@ e.g
 
 (brain-phucker/bfk-proceed "teststring" "[-------------------------------->]")
 
-; "TESTSTRING"
+;=> "TESTSTRING"
 
 (brain-phucker/bfk-proceed "teststring" "[-------------------------------->>]")
 
-; "TeStStRiNg"
+;=> "TeStStRiNg"
 
 (brain-phucker/bfk-proceed "teststring" "[-------------------------------->>>]")
 
-; "TesTstRinG"
+;=> "TesTstRinG"
 
 ```
 
@@ -89,10 +89,10 @@ Brain Fxck is a minimize language with 8 commands, which runs on a machine conta
 
 The 8 commands are:
 
-* + increases the value of the element pointed
-* - decreases the value of the element pointed
-* > move the pointer right by an element
-* < move the pointer right by an element
-* . output the value of the element pointed
-* , input as the value of the element pointed
+* **+** increases the value of the element pointed
+* **-** decreases the value of the element pointed
+* **>** move the pointer right by an element
+* **<** move the pointer right by an element
+* **.** output the value of the element pointed
+* **,** input as the value of the element pointed
 * The ',' command is not included in this version of bfk-clojure
